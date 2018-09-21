@@ -1,0 +1,75 @@
+<div class="card">
+  <div class="card-body">
+    <form #eventosForm="ngForm" (ngSubmit)="onSubmit(eventosForm)">
+      <div class="form-group">
+        <input type="hidden" 
+        name="$key" 
+        class="form-control"
+        #$key="ngModel" 
+        [(ngModel)]="contactoService.contactoSeleccionado.$key"
+        placeholder="ID"
+        >
+        
+
+      </div>
+
+      <div class="form-group">
+        <input type="text"
+        
+            class="form-control"
+            name="Nombre"
+            #nombre="ngModel"
+            [(ngModel)]="eventoService .eventoSeleccionado.Nombre"
+            placeholder="Nombre"
+      
+        >
+      </div>
+
+      <div class="form-group">
+        <input type="text"
+        
+            class="form-control"
+            name="Hora"
+            #hora="ngModel"
+            [(ngModel)]="eventosService .eventosSeleccionado.Hora"
+            placeholder="Hora"
+        
+       >
+      </div>
+
+      <div class="form-group">
+        <input type="text"
+        
+          class="form-control"
+          name="Fecha"
+          #fecha="ngModel"
+          [(ngModel)]="eventosService .eventosSeleccionado.Fecha"
+          placeholder="fecha"
+          > 
+      </div>
+
+      <div class="form-group">
+        <input type="text"
+        
+          class="form-control"
+          name="Descripcion"
+          #descripcion="ngModel"
+          [(ngModel)]="eventosService .eventosSeleccionado.Descripcion"
+          placeholder="Descripcion de evento"
+          > 
+      </div>
+        
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">
+            <i class="fas fa-plus-circle"></i> Agregar Contacto
+        </button>
+        <button class="btn btn-secondary" type="reset" (click)="resetForm(eventosForm)">
+            <i class="fas fa-sync-alt"></i> Reset
+        </button>
+      </div>
+        
+      
+
+    </form>
+  </div>
+</div>

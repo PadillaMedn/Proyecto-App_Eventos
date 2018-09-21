@@ -19,13 +19,19 @@ import { AddEventosComponent } from './components/add-eventos/add-eventos.compon
 
 //servicio
 import {EventosService } from './servicios/eventos.service';
+import { CompGeneralComponent } from './components/comp-general/comp-general.component';
+import { AddEventsComponent } from './components/comp-general/add-events/add-events.component';
+import { ListaEventosComponent } from './components/comp-general/lista-eventos/lista-eventos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventosComponent,
     AddEventosComponent,
-    EventosComponent
+    EventosComponent,
+    CompGeneralComponent,
+    AddEventsComponent,
+    ListaEventosComponent
   ],
   imports: [
     BrowserModule,

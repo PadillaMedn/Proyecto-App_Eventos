@@ -1,7 +1,7 @@
 
 <div class="card">
   <div class="card-body">
-    <form #eventoForm= "ngForm" (ngSubmit)="onSubmit(eventoForm)">
+    <form #addeventsForm="ngForm" (ngSubmit)="onSubmit(addeventsForm)">
       <div class="form-group">
         <input type="hidden" 
         name="$key" 
@@ -18,9 +18,9 @@
         <input type="text"
         
             class="form-control"
-            name="Nombre"
+            name="nombre"
             #nombre="ngModel"
-            [(ngModel)]="eventosService.eventoSeleccionado.Nombre"
+            [(ngModel)]="eventosService.eventoSeleccionado.nombre"
             placeholder="Nombre"
       
         >
@@ -30,21 +30,21 @@
         <input type="text"
         
             class="form-control"
-            name="Hora"
+            name="hora"
             #hora="ngModel"
-            [(ngModel)]="eventosService.eventoSeleccionado.Hora"
+            [(ngModel)]="eventosService.eventoSeleccionado.hora"
             placeholder="Hora"
         
        >
       </div>
 
       <div class="form-group">
-        <input type="text"
+        <input type="date"
         
           class="form-control"
-          name="Fecha"
+          name="fecha"
           #fecha="ngModel"
-          [(ngModel)]="eventosService.eventoSeleccionado.Fecha"
+          [(ngModel)]="eventosService.eventoSeleccionado.fecha"
           placeholder="fecha"
           > 
       </div>
@@ -53,9 +53,9 @@
         <input type="text"
         
           class="form-control"
-          name="Descripcion"
+          name="descripcion"
           #descripcion="ngModel"
-          [(ngModel)]="eventosService.eventoSeleccionado.Descripcion"
+          [(ngModel)]="eventosService.eventoSeleccionado.descripcion"
           placeholder="Descripcion de evento"
           > 
       </div>

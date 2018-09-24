@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import {EventosService} from '../../../servicios/eventos.service';
 import {NgForm} from '@angular/forms';
 import {eventos} from '../../../models/eventos';
+
 // import { ToastrService } from 'ngx-toastr';
 
 
@@ -17,7 +18,7 @@ export class AddEventsComponent implements OnInit {
 
   constructor(
     private eventosService: EventosService,
-    // private toastrService: toastrService
+    // private toastrService: ToastrService
     ) { }
 
   ngOnInit() {
@@ -25,22 +26,22 @@ export class AddEventsComponent implements OnInit {
     this.resetForm();
   }
 
-onSubmit(eventoForm: NgForm){
-  if (eventoForm.value.$key == null) {
-    this.eventosService.insertarevento(eventoForm.value);
+onSubmit(addeventsForm: NgForm){
+  if (addeventsForm.value.$key == null) {
+    this.eventosService.insertarevento(addeventsForm.value);
     // this.toastrService.info('evento Agregado', 'Operacion Exitosa' );
 
   } else {
-    this.eventosService.actualizarevento(eventoForm.value);
+    this.eventosService.actualizarevento(addeventsForm.value);
     // this.toastrService.warning('evento Modificado', 'Operacion Exitosa' );
   }
-    this.resetForm(eventoForm);
+    this.resetForm(addeventsForm);
 
 }
 
-resetForm(eventoForm?: NgForm){
-if (eventoForm != null) {
-  eventoForm.reset();
+resetForm(addeventsForm?: NgForm){
+if (addeventsForm != null) {
+  addeventsForm.reset();
   this.eventosService.eventoSeleccionado = new eventos();
 }
 }

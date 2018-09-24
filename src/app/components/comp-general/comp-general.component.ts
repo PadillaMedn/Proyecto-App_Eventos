@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { eventos } from '../../models/eventos';
+import { EventosService } from '../../servicios/eventos.service';
 
 @Component({
   selector: 'app-comp-general',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompGeneralComponent implements OnInit {
 
-  constructor() { }
+  constructor(private eventosservice:EventosService) { }
 
   ngOnInit() {
   }

@@ -1,3 +1,33 @@
-<p>
-  lista-eventos works!
-</p>
+<div class="card">
+    <div class="card-body">
+      <h6 class="text-center">Lista de contactos</h6>
+      <table class="table table-sm table-hover table-bordered">
+        <thead class=" bg-info">
+          <tr >
+            <th>Nombre</th>
+            <th>hora</th>
+            <th>fecha</th>
+            <th>descripcion</th>
+  
+            <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let evento of listaeventos">
+            <td>{{evento.nombre}}</td>
+            <td>{{evento.hora}}</td>
+            <td>{{evento.fecha}}</td>
+            <td>{{evento.descripcion}}</td>
+            <td>
+              <a class="btn btn-secondary text-white" (click)="onEdit(evento)">
+              <i class="fas fa-edit"></i>
+              </a><span></span>
+              <a class="btn btn-danger text-whit" (click)="onDelete(evento.$key)">
+                <i class="fas fa-trash-alt" ></i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

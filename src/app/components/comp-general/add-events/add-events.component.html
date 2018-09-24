@@ -1,3 +1,78 @@
-<p>
-  add-events works!
-</p>
+
+<div class="card">
+  <div class="card-body">
+    <form #eventoForm= "ngForm" (ngSubmit)="onSubmit(eventoForm)">
+      <div class="form-group">
+        <input type="hidden" 
+        name="$key" 
+        class="form-control"
+        #$key="ngModel" 
+        [(ngModel)]="eventosService.eventoSeleccionado.$key"
+        placeholder="ID"
+        >
+        
+
+      </div>
+
+      <div class="form-group">
+        <input type="text"
+        
+            class="form-control"
+            name="Nombre"
+            #nombre="ngModel"
+            [(ngModel)]="eventosService.eventoSeleccionado.Nombre"
+            placeholder="Nombre"
+      
+        >
+      </div>
+
+      <div class="form-group">
+        <input type="text"
+        
+            class="form-control"
+            name="Hora"
+            #hora="ngModel"
+            [(ngModel)]="eventosService.eventoSeleccionado.Hora"
+            placeholder="Hora"
+        
+       >
+      </div>
+
+      <div class="form-group">
+        <input type="text"
+        
+          class="form-control"
+          name="Fecha"
+          #fecha="ngModel"
+          [(ngModel)]="eventosService.eventoSeleccionado.Fecha"
+          placeholder="fecha"
+          > 
+      </div>
+
+      <div class="form-group">
+        <input type="text"
+        
+          class="form-control"
+          name="Descripcion"
+          #descripcion="ngModel"
+          [(ngModel)]="eventosService.eventoSeleccionado.Descripcion"
+          placeholder="Descripcion de evento"
+          > 
+      </div>
+        
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">
+            <i class="fas fa-plus-circle"></i> Agregar Evento
+        </button>
+        <button class="btn btn-secondary" type="reset" (click)="resetForm(eventoForm)">
+            <i class="fas fa-sync-alt"></i> Reset
+        </button>
+      </div>
+        
+      
+
+    </form>
+  </div>
+</div>
+
+

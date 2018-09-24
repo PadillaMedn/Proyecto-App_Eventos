@@ -1,4 +1,4 @@
-export interface eventos {
+export class eventos {
     $key : string;
     nombre : string;
     hora : string;

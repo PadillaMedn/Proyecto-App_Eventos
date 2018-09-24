@@ -10,7 +10,10 @@ export class EventosService {
 
   listaeventos: AngularFireList<any>;
 
-  // eventoSeleccionado= new eventos;
+   eventoSeleccionado: eventos = new eventos();
+
+
+
   constructor( private firebase:AngularFireDatabase) { }
 
   obtenereventos() {

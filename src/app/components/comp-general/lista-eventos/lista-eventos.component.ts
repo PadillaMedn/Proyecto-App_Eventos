@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// import {EventosComponent } from '../../eventos/eventos.component'
+import { EventosService } from '../../../servicios/eventos.service'
+// import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-lista-eventos',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaEventosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private eventosservice : EventosService) { }
 
   ngOnInit() {
   }

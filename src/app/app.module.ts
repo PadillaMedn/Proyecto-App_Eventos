@@ -14,8 +14,8 @@ import {AngularFireDatabaseModule } from 'angularfire2/database';
 import {AngularFireModule } from 'angularfire2';
 import {environment } from '../environments/environment';
 
-import { EventosComponent } from './components/eventos/eventos.component';
-import { AddEventosComponent } from './components/add-eventos/add-eventos.component';
+// import { ListaEventosComponent } from './components/comp-general/lista-eventos/lista-eventos.component';
+// import { AddEventosComponent } from './components/add-events/add-events.component';
 
 //servicio
 import {EventosService } from './servicios/eventos.service';
@@ -26,9 +26,9 @@ import { ListaEventosComponent } from './components/comp-general/lista-eventos/l
 @NgModule({
   declarations: [
     AppComponent,
-    EventosComponent,
-    AddEventosComponent,
-    EventosComponent,
+    // EventosComponent,
+    // AddEventosComponent,
+    // EventosComponent,
     CompGeneralComponent,
     AddEventsComponent,
     ListaEventosComponent

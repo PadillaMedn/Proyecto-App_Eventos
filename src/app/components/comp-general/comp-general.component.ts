@@ -8,7 +8,7 @@ import { EventosService } from '../../servicios/eventos.service';
 })
 export class CompGeneralComponent implements OnInit {
 
-  constructor(private eventosservice:EventosService) { }
+  constructor(public eventosservice:EventosService) { }
 
   ngOnInit() {
   }

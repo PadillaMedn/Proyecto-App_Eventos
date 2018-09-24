@@ -12,7 +12,7 @@ import {ToastrModule } from 'ngx-toastr';
 //config. Firebase
 import {AngularFireDatabaseModule } from 'angularfire2/database';
 import {AngularFireModule } from 'angularfire2';
-import {environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 
 // import { ListaEventosComponent } from './components/comp-general/lista-eventos/lista-eventos.component';
 // import { AddEventosComponent } from './components/add-events/add-events.component';

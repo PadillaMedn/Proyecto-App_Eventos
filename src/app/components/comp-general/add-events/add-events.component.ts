@@ -17,7 +17,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AddEventsComponent implements OnInit {
 
   constructor(
-    private eventosService: EventosService,
+    public eventosService: EventosService,
     private toastrService: ToastrService
     ) { }
 

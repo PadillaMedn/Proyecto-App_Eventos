@@ -23,6 +23,7 @@
     "angularfire2": "^5.0.1",
     "core-js": "^2.5.4",
     "firebase": "^5.5.1",
+    "ngx-toastr": "^9.1.0",
     "rxjs": "^6.0.0",
     "toastr": "^2.1.4",
     "zone.js": "~0.8.26"

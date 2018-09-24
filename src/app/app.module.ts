@@ -7,7 +7,7 @@ import {FormsModule} from '@angular/forms';
 
 //tastr
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-// import {ToastrModule } from 'ngx-toastr';
+import {ToastrModule } from 'ngx-toastr';
 
 //config. Firebase
 import {AngularFireDatabaseModule } from 'angularfire2/database';
@@ -38,7 +38,7 @@ import { ListaEventosComponent } from './components/comp-general/lista-eventos/l
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
-    // ToastrModule.forRoot(),
+    ToastrModule.forRoot(),
     BrowserAnimationsModule,
   ],
   providers: [

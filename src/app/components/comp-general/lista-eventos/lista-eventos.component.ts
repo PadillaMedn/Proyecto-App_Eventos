@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import {EventosComponent } from '../../eventos/eventos.component'
 import { EventosService } from '../../../servicios/eventos.service'
 import { eventos } from '../../../models/eventos'
-// import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-lista-eventos',
@@ -14,7 +14,7 @@ export class ListaEventosComponent implements OnInit {
   
   constructor(
     private eventosService: EventosService,
-    // private toastr: ToastrService
+    private toastr: ToastrService
   ) { }
 
   ngOnInit() {
@@ -37,7 +37,7 @@ export class ListaEventosComponent implements OnInit {
   onDelete($key: string) {
     if (confirm('Seguro que desea eliminarlo')) {
       this.eventosService.eliminarevento($key);
-      // this.toastr.error('El contacto ha sido eliminado de Firebase', 'Contacto ELiminado');
+      this.toastr.error('El contacto ha sido eliminado de Firebase', 'Contacto ELiminado');
     }
 
   }
